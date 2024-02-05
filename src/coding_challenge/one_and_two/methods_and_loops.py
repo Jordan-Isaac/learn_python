@@ -6,6 +6,8 @@ problem solving.
 
 Challenge 2.5 and Challenge 4 are harder than the rest, simply because they are
 more complex and require more moving parts.
+
+Note: as this is the first challenge; code style won't be strictly enforced.
 """
 
 FIRST_NUMBER = 110100100
@@ -36,6 +38,7 @@ def is_even():
 
 # Challenge 2.5 ; strings, lists, and booleans
 ROCK_PAPER_SCISSORS = ["rock", "paper", "scissors"]
+from random import randint
 def rps_win_or_lost():
     """Checks if player's hand wins or loses.
     
@@ -46,7 +49,8 @@ def rps_win_or_lost():
     def get_cpu_tactic():
         """Generates the computer's move.
         
-        Uses math.random to select a tactic from ROCK_PAPER_SCISSORS.
+        Uses the random package's randint() to select a tactic's index from
+        ROCK_PAPER_SCISSORS.
         
         :return string: member of ROCK_PAPER_SCISSORS
         """
