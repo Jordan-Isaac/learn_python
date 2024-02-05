@@ -4,7 +4,7 @@
 This coding challenge should introduce you to a fair amount of thinking and
 problem solving.
 
-Challenge 2.5 and Challenge 4 are harder than the rest, simply because they are
+Challenge 4 and Challenge 5 are harder than the rest, simply because they are
 more complex and require more moving parts.
 
 Note: as this is the first challenge; code style won't be strictly enforced.
@@ -36,25 +36,14 @@ def is_even() -> bool:
     :return bool: True if even, False if odd.
     """
 
-# Challenge 2.5 ; strings, lists, and booleans
-ROCK_PAPER_SCISSORS = ["rock", "paper", "scissors"]
-from random import randint
-def rps_win_or_lost() -> bool:
-    """Checks if player's hand wins or loses.
+def is_member() -> bool:
+    """Checks if given string is a member of a given list of strings.
     
-    Depending on whether 'rock', 'paper', or 'scissors' is passed - check if
-    the user beats the computer.
+    Takes two parameters, first the string to check and second the list of
+    strings to inspect.
+    
+    :return bool: True if member, False if not.
     """
-
-    def get_cpu_tactic() -> str:
-        """Generates the computer's move.
-        
-        Uses the random package's randint() to select a tactic's index from
-        ROCK_PAPER_SCISSORS.
-        
-        :return string: member of ROCK_PAPER_SCISSORS
-        """
-
 
 # Challenge 3 ;  string manipulation
 TEST_STRING = ("ASLIKJFBA:EODGUBAS:ODIGBNSD:LKJGBNV IPWUEHTF)*"
@@ -90,7 +79,33 @@ def as_lowercase() -> str:
 def as_upper_lower() -> str:
     """Returns a string where each character alternates uppercase&lowercase."""
 
-# Challenge 4 ; Prime Number Detector :
+def get_first_word() -> str:
+    """Gets first word in a string."""
+
+# Bonus round!
+def get_word_by_index() -> str:
+    """Gets nth word in a string."""
+
+# Challenge 4 ; strings, lists, and booleans
+ROCK_PAPER_SCISSORS = ["rock", "paper", "scissors"]
+from random import randint
+def rps_win_or_lost() -> bool:
+    """Checks if player's hand wins or loses.
+    
+    Depending on whether 'rock', 'paper', or 'scissors' is passed - check if
+    the user beats the computer.
+    """
+
+    def get_cpu_tactic() -> str:
+        """Generates the computer's move.
+        
+        Uses the random package's randint() to select a tactic's index from
+        ROCK_PAPER_SCISSORS.
+        
+        :return string: member of ROCK_PAPER_SCISSORS
+        """
+
+# Challenge 5 ; Prime Number Detector :
 # create a method which takes one integer as input and returns True or False
 # depending on whether or not that number is a prime number.
 
