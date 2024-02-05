@@ -1,0 +1,2 @@
+
+TACTICS = ["ROCK", "PAPER", "SCISSORS"]
