@@ -14,23 +14,23 @@ FIRST_NUMBER = 110100100
 SECOND_NUMBER =  1000101
 
 # Challenge 1 ; basic functions for mathematical operation
-def add():
+def add() -> float:
     """Add two numbers."""
 
-def subtract():
+def subtract() -> float:
     """Subtract two numbers."""
 
-def multiply():
+def multiply() -> float:
     """Multiply two numbers."""
 
-def divide():
+def divide() -> float:
     """Divide two numbers."""
 
-def two_dp():
+def two_dp() -> float:
     """Rounds numerical types to two decimal places."""
 
 # Challenge 2 ; booleans
-def is_even():
+def is_even() -> bool:
     """Checks if integer is even or odd.
     
     :return bool: True if even, False if odd.
@@ -39,14 +39,14 @@ def is_even():
 # Challenge 2.5 ; strings, lists, and booleans
 ROCK_PAPER_SCISSORS = ["rock", "paper", "scissors"]
 from random import randint
-def rps_win_or_lost():
+def rps_win_or_lost() -> bool:
     """Checks if player's hand wins or loses.
     
     Depending on whether 'rock', 'paper', or 'scissors' is passed - check if
     the user beats the computer.
     """
 
-    def get_cpu_tactic():
+    def get_cpu_tactic() -> str:
         """Generates the computer's move.
         
         Uses the random package's randint() to select a tactic's index from
@@ -86,6 +86,9 @@ def count_lowercase() -> int:
 
 def as_lowercase() -> str:
     """Returns a given string in lowercase."""
+
+def as_upper_lower() -> str:
+    """Returns a string where each character alternates uppercase&lowercase."""
 
 # Challenge 4 ; Prime Number Detector :
 # create a method which takes one integer as input and returns True or False
