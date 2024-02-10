@@ -1,31 +1,18 @@
+#ChatGPT optimised
 ROCK_PAPER_SCISSORS = ["rock", "paper", "scissors"]
-from random import randint
+ATTEMPT_LIMIT = 3
 
 def rps_win_or_lost(player_choice: str) -> bool:
-    """Checks if player's hand wins or loses.
-    
-    Depending on whether 'rock', 'paper', or 'scissors' is passed - check if
-    the user beats the computer.
-    
-    :param player_choice: The player's choice ('rock', 'paper', or 'scissors').
-    :return: True if the player wins, False if the player loses or it's a tie.
-    """
-
+    """Checks if the player's hand wins or loses."""
     def get_cpu_tactic() -> str:
-        """Generates the computer's move.
-        
-        Uses the random package's randint() to select a tactic's index from
-        ROCK_PAPER_SCISSORS.
-        
-        :return string: member of ROCK_PAPER_SCISSORS
-        """
+        """Generates the computer's move."""
         return ROCK_PAPER_SCISSORS[randint(0, 2)]
 
     cpu_choice = get_cpu_tactic()
 
-    # victory condition
+    # Victory condition
     if player_choice == cpu_choice:
-        print(f"tie {player_choice}.")
+        print(f"Tie! {player_choice}.")
         return False
     elif (
         (player_choice == "rock" and cpu_choice == "scissors") or
@@ -35,14 +22,13 @@ def rps_win_or_lost(player_choice: str) -> bool:
         print(f"A winner is you! {player_choice} beats {cpu_choice}.")
         return True
     else:
-        print(f"get rekt nerd, {cpu_choice} beats {player_choice}.")
+        print(f"Get rekt nerd! {cpu_choice} beats {player_choice}.")
         return False
 
-# function test
 def main():
     attempts = 0
 
-    while attempts < 3:  # Adjusted condition for the loop
+    while attempts < ATTEMPT_LIMIT:
         player_choice = input("Enter your choice (rock, paper, or scissors): ").lower()
 
         if player_choice in ROCK_PAPER_SCISSORS:
@@ -61,7 +47,7 @@ def main():
 
         attempts += 1
 
-    if attempts == 3:  # Adjusted condition for exiting the program
+    if attempts == ATTEMPT_LIMIT:
         print("You seem to have trouble with this. Exiting the game.")
 
 if __name__ == "__main__":
