@@ -42,7 +42,7 @@ def rps_win_or_lost(player_choice: str) -> bool:
 def main():
     attempts = 0
 
-    while attempts < 3:  # Adjusted condition for the loop
+    while attempts < 3:  # Adjusted condition for the loop // I would have preferred the initial stages not actually counting towards valid attempts
         player_choice = input("Enter your choice (rock, paper, or scissors): ").lower()
 
         if player_choice in ROCK_PAPER_SCISSORS:
